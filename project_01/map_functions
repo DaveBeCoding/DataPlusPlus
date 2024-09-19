@@ -1,0 +1,59 @@
+                            +----------------------------+
+                            |  consumer_complaints.json  |
+                            |        (Data File)         |
+                            +-------------+--------------+
+                                          |
+                                          v
+                            +----------------------------+
+                            |    src/data_ingestion.cxx  |
+                            +----------------------------+
+                            | - Includes utilities.h     |
+                            | - Implements:              |
+                            |    - load_complaints()     |
+                            |    - preprocess_data()     |
+                            +-------------+--------------+
+                                          |
+                 Reads and preprocesses data, returns vector<Complaint>
+                                          |
+                                          v
+                            +----------------------------+
+                            |         main.cxx           |
+                            +----------------------------+
+                            | - Includes utilities.h     |
+                            | - Calls functions from:    |
+                            |    - data_ingestion.cxx    |
+                            |    - trend_analysis.cxx    |
+                            |    - geographical_analysis.cxx |
+                            |    - product_categorization.cxx |
+                            |    - data_visualization_prep.cxx |
+                            +-------------+--------------+
+                                          |
+                                          v
+    +---------------------+---------------+------------------+---------------------+
+    |                     |                                  |                     |
+    v                     v                                  v                     v
++-----------+     +-----------------------+     +--------------------------+    +-----------------------+
+| Utilities |     |  src/trend_analysis.cxx |     | src/geographical_analysis.cxx |    | src/product_categorization.cxx |
+|   .h      |     +-----------------------+     +--------------------------+    +-----------------------+
+| - Defines |     | - Includes utilities.h |     | - Includes utilities.h   |    | - Includes utilities.h |
+|   Complaint|     | - Implements:          |     | - Implements:            |    | - Implements:          |
+|   struct  |     |    - aggregate_...     |     |    - aggregate_...       |    |    - aggregate_...     |
+| - Declares|     |    - display_...       |     |    - display_...         |    |    - display_...       |
+|   functions|     +-----------------------+     +--------------------------+    +-----------------------+
++-----+-----+                                                                             |
+      |                                                                                   v
+      |                                                                    +----------------------------+
+      |                                                                    | src/data_visualization_prep.cxx |
+      |                                                                    +----------------------------+
+      |                                                                    | - Includes utilities.h     |
+      |                                                                    | - Implements:              |
+      |                                                                    |    - export_to_json()      |
+      |                                                                    +----------------------------+
+      |
+      v
++------------------------+
+|        lib/            |
+|      json.hpp          |
+| (nlohmann/json library)|
++------------------------+
+
