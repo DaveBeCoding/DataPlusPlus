@@ -1,0 +1,75 @@
+./consumer_complaints_analysis 
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Failed to parse date: 2024-09-03T12:00:00-05:00
+Complaint Volume Over Time:
+
+Month-Year	Number of Complaints
+-------------------------------------
+2024-09		25
+Failed to open file for writing: ../data/complaints_per_month.json
+Top States by Number of Complaints:
+
+State	Number of Complaints
+-------------------------------
+AR	1
+MI	2
+SC	2
+MD	2
+AL	1
+NJ	1
+TX	2
+GA	2
+NY	2
+PA	1
+IL	1
+WI	1
+OH	1
+MA	1
+WA	1
+FL	2
+LA	1
+NV	1
+Failed to open file for writing: ../data/complaints_by_state.json
+Top Complained Products:
+
+Product		Number of Complaints
+-----------------------------------
+debt collection		2
+credit card		2
+credit reporting or other personal consumer reports		21
+
+Top Complaint Issues:
+
+Issue		Number of Complaints
+-----------------------------------
+written notification about debt		1
+attempts to collect debt not owed		1
+getting a credit card		1
+incorrect information on your report		13
+problem with a company's investigation into an existing problem		3
+improper use of your report		6
+Failed to open file for writing: ../data/product_complaints.json
+Failed to open file for writing: ../data/issue_complaints.json
