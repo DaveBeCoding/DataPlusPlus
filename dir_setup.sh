@@ -1,10 +1,12 @@
 #!/bin/bash
 
+PROJECT_NUM=$1
+
 # Create project root directory
-mkdir -p project_01
+mkdir -p project_${PROJECT_NUM}
 
 # Change into project directory
-cd project_01
+cd project_${PROJECT_NUM}
 
 # Create subdirectories
 mkdir data include lib src
@@ -39,4 +41,3 @@ touch utilities.h
 
 
 echo "Directory structure created!"
-
