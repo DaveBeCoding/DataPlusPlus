@@ -18,7 +18,7 @@ void display_product_and_issue_analysis(
 void export_to_json(const std::unordered_map<std::string, int>&, const std::string&);
 
 int main() {
-    std::string data_file = "path/to/data";
+    std::string data_file = "/Users/deejay/Developer/src/R_D/Big_Data/Data++/project_01/data/consumer_report.json";
     std::vector<Complaint> complaints = load_complaints(data_file);
 
     if (complaints.empty()) {

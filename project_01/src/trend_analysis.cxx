@@ -7,10 +7,22 @@
 #include "../include/utilities.h"
 
 // Function to parse date string into tm struct
+// std::tm parse_date(const std::string& date_str) {
+//     std::tm tm = {};
+//     std::istringstream ss(date_str);
+//     ss >> std::get_time(&tm, "%Y-%m-%dT%H:%M:%S%z");
+//     if (ss.fail()) {
+//         std::cerr << "Failed to parse date: " << date_str << std::endl;
+//     }
+//     return tm;
+// }
+
+//modified parse
 std::tm parse_date(const std::string& date_str) {
     std::tm tm = {};
-    std::istringstream ss(date_str);
-    ss >> std::get_time(&tm, "%Y-%m-%dT%H:%M:%S%z");
+    std::string trimmed_date = date_str.substr(0, 19);  // Strip timezone
+    std::istringstream ss(trimmed_date);
+    ss >> std::get_time(&tm, "%Y-%m-%dT%H:%M:%S");
     if (ss.fail()) {
         std::cerr << "Failed to parse date: " << date_str << std::endl;
     }
